@@ -1,32 +1,74 @@
 {
     // General Settings
-    "workbench.colorTheme": "gravel-pit",
+    "editor.fontFamily": "'Noto Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "files.trimTrailingWhitespace": true,
+    "files.associations": {
+      "*.sdf": "xml",
+      "*.world": "xml",
+      "*.gazebo": "xml"
+    },
 
     // Editor Settings
     "editor.renderWhitespace": "all",
     "editor.tabSize": 2,
     "editor.fontSize": 13,
     "editor.detectIndentation": false,
-    "files.trimTrailingWhitespace": true,
+    "[python]": {
+      "editor.tabSize": 4
+    },
+
+    // Explorer
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+
+    // Terminal settings
+    "terminal.integrated.fontFamily": "Menlo for Powerline",
+    "terminal.integrated.scrollback": 2000,
 
     // C++ Settings
     "C_Cpp.default.cppStandard": "c++17",
     "C_Cpp.default.cStandard": "c11",
     "C_Cpp.default.includePath": [
         "${workspaceFolder}/**",
-        "/usr/include/**",
-        "/usr/local/include"
-    ],
-    "C_Cpp.default.browse.path": [
-        "${workspaceFolder}/**",
         "/usr/include",
         "/usr/local/include",
     ],
-    "C_Cpp.default.intelliSenseMode": "clang-x64",
+    "C_Cpp.default.browse.limitSymbolsToIncludedHeaders": true,
     "C_Cpp.default.browse.databaseFilename": "~/.vscode/browse.vc.db",
+
+    // Intellisense settings
+    "C_Cpp.default.intelliSenseMode": "gcc-x64",
+    "C_Cpp.intelliSenseEngine": "Default",
+    "C_Cpp.intelliSenseEngineFallback": "Disabled",
+    "C_Cpp.intelliSenseCacheSize": 10000,
+    "C_Cpp.workspaceParsingPriority": "highest",
+
+    // Clang-format settings
     "C_Cpp.clang_format_path": "/usr/bin/clang-format",
-    "C_Cpp.clang_format_style": "${workspaceFolder}/.clang-format",
+    "C_Cpp.clang_format_style": "file", // finds the next parent .clang-format file
     "C_Cpp.clang_format_fallbackStyle": "none",
+    "C_Cpp.updateChannel": "Default",
+    "window.zoomLevel": 0,
+    "[cpp]": {
+      "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "extensions.ignoreRecommendations": false,
+    "editor.lineNumbers": "relative",
+    "[xml]": {
+      "editor.defaultFormatter": "redhat.vscode-xml"
+    },
+    "debug.console.fontSize": 13,
+    "markdown.preview.fontSize": 13,
+    "workbench.colorTheme": "gravel-pit",
+    "editor.autoIndent": "advanced",
+    // Python settings
+    "python.formatting.provider": "autopep8",
+    "python.linting.pylintArgs": [
+      "--max-line-length=90"
+    ],
+    "python.formatting.autopep8Args": [
+      "--max-line-length=90"
+    ]
 
     // Doxygen Settings
 }
