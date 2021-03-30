@@ -17,7 +17,7 @@ git clone git@github.com:BeatScherrer/vscode-settings.git
 ```
 remove the current `User` folder after creating a backup:
 ```
-cp -r ~/config/'Code - OSS/User ~/.config/'Code - OSS/User_bk
+cp -r ~/config/'Code - OSS'/User ~/.config/'Code - OSS/User_bk
 rm -rf ~/.config/'Code - OSS'/User
 ```
 symlink the `User` folder to the vs-code user settings:
