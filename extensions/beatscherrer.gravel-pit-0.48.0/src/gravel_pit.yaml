@@ -1,0 +1,612 @@
+$schema: vscode://schemas/color-theme
+name: gravel pit
+author: Beat Scherrer
+maintainers:
+  - Beat Scherrer <beat.scherrer@gmail.com>
+semanticClass: theme.gravelpit
+semanticHighlighting: true
+gravelpit:
+  # colors for terminal
+  ansi:
+    # black
+    - &BLACK          '#282a2e' # black
+    - &BRIGHT_BLACK   '#555b65' # bright black
+    # red
+    - &RED            '#a54242' # red
+    - &BRIGHT_RED     '#cc6666' # bright red
+    # green
+    - &GREEN          '#8c9440' # green
+    - &BRIGHT_GREEN   '#b5bd68' # bright green 
+    # yellow
+    - &YELLOW         '#de935f' # yellow
+    - &BRIGHT_YELLOW  '#ffeac3' # bright yellow
+    # blue
+    - &BLUE           '#5f819d' # blue
+    - &BRIGHT_BLUE    '#81a2be' # bright blue
+    # magenta
+    - &MAGENTA        '#85678f' # magenta
+    - &BRIGHT_MAGENTA '#b294bb' # bright magenta
+    # cyan
+    - &CYAN           '#5e8d87' # cyan
+    - &BRIGHT_CYAN    '#8abeb7' # bright cyan
+    # white
+    - &WHITE          '#707880' # white
+    - &BRIGHT_WHITE   '#c5c8c6' # bright white
+
+  # TODO find a way to reference the references
+  # allows to set ansi colors and use them for the theme as well
+  base:
+    - &BG        '#1d1f21'
+    - &FG        '#c5c8c6'
+    - &SELECTION '#44475A'
+    - &COMMENT   '#555b65'
+
+  brightOther:
+    # Temporary (awaiting fix)
+    - &TEMP_QUOTES          '#E9F284'
+    - &TEMP_PROPERTY_QUOTES '#8BE9FE'
+  other:
+    - &LineHighlight '#44475A75'
+    - &NonText       '#FFFFFF1A'
+    - &WHITE_WHITE   '#FFFFFF'
+    - &TAB_DROP_BG   '#5e8d8787' # sRGB
+    # UI Variants
+    - &BGLighter     '#383838' 
+    - &BGLight       '#282a2e' # menu bar & dropdown
+    - &BGDark        '#252526' # file viewer
+    - &BGDarker      '#191A21' # outlines
+
+# User Interface (more info: https://code.visualstudio.com/docs/getstarted/theme-color-reference)
+colors:
+
+### Overall ###
+
+###########
+# Terminal
+###########
+  terminal.background: *BG
+  terminal.foreground: *FG
+  terminal.ansiBrightBlack: *BRIGHT_BLACK
+  terminal.ansiBrightRed: *BRIGHT_RED
+  terminal.ansiBrightGreen: *BRIGHT_GREEN
+  terminal.ansiBrightYellow: *BRIGHT_YELLOW
+  terminal.ansiBrightBlue: *BRIGHT_BLUE
+  terminal.ansiBrightMagenta: *BRIGHT_MAGENTA
+  terminal.ansiBrightCyan: *BRIGHT_CYAN
+  terminal.ansiBrightWhite: *BRIGHT_WHITE
+  terminal.ansiBlack: *BLACK
+  terminal.ansiRed: *RED
+  terminal.ansiGreen: *GREEN
+  terminal.ansiYellow: *BLUE
+  terminal.ansiBlue: *BLUE
+  terminal.ansiMagenta: *MAGENTA
+  terminal.ansiCyan: *CYAN
+  terminal.ansiWhite: *WHITE
+
+  # Contrast Colors
+  contrastBorder: *BGDarker
+  contrastActiveBorder:
+
+  # Base Colors
+  focusBorder: *COMMENT
+  foreground: *FG
+  widget.shadow:
+  selection.background: *CYAN
+  errorForeground: *BRIGHT_RED
+
+  # Button Control
+  button.background: *SELECTION
+  button.foreground: *FG      
+  button.hoverBackground:    
+
+  # Dropdown Control
+  dropdown.background: *BGLight
+  dropdown.border: *BGDarker
+  dropdown.foreground: *FG
+
+  # Input Control, ctrl + p e.g.
+  input.background: *BG
+  input.foreground: *FG
+  input.border: *BGDarker
+  input.placeholderForeground: *COMMENT
+  inputOption.activeBorder: *BRIGHT_RED
+  inputValidation.infoForeground:
+  inputValidation.infoBackground:
+  inputValidation.infoBorder: *BRIGHT_YELLOW
+  inputValidation.warningForeground:
+  inputValidation.warningBackground:
+  inputValidation.warningBorder: *BRIGHT_BLUE
+  inputValidation.errorForeground:
+  inputValidation.errorBackground:
+  inputValidation.errorBorder: *BRIGHT_RED
+
+  # Scroll Bar Control
+  scrollbar.shadow:
+  scrollbarSlider.activeBackground:
+  scrollbarSlider.background:
+  scrollbarSlider.hoverBackground:
+
+  # Badge
+  badge.foreground: *FG
+  badge.background: *SELECTION
+
+  # Progress Bar
+  progressBar.background: *BRIGHT_YELLOW
+
+  # List & Trees
+  list.activeSelectionBackground: *SELECTION
+  list.activeSelectionForeground: *FG
+  list.dropBackground: *SELECTION
+  list.focusBackground: *LineHighlight
+  list.highlightForeground: *BRIGHT_YELLOW
+  list.hoverBackground: *LineHighlight
+  list.inactiveSelectionBackground: *LineHighlight
+  list.inactiveSelectionForeground:
+  list.warningForeground: *BRIGHT_BLUE
+  list.errorForeground: *BRIGHT_RED
+  list.hoverForeground:
+  list.focusForeground:
+
+###########
+# Side Bar
+###########
+  # Activity Bar (left)
+  activityBar.background: *BGDark
+  activityBar.inactiveForeground: *COMMENT
+  activityBar.dropBackground:
+  activityBar.foreground: *FG
+  activityBar.border:
+  activityBar.activeBorder: !alpha [*CYAN, 80]
+  activityBar.activeBackground: !alpha [*CYAN, 10]
+  activityBarBadge.background: *CYAN
+  activityBarBadge.foreground: *FG
+
+  # Side Bar
+  sideBar.background: '#252526'
+  sideBar.foreground:
+  sideBar.border:
+  sideBarTitle.foreground: *FG
+  sideBarSectionHeader.background: *BGLighter
+  sideBarSectionHeader.foreground:
+  sideBarSectionHeader.border: *BGDarker
+
+  # Editor Group & Tabs
+  editorGroup.background:
+  editorGroup.border: *COMMENT
+  editorGroup.dropBackground: *TAB_DROP_BG
+  editorGroupHeader.noTabsBackground:
+  editorGroupHeader.tabsBackground: *BGDarker
+  editorGroupHeader.tabsBorder:
+  tab.activeBackground: *BG
+  tab.activeForeground: *FG
+  tab.border: *BGDarker
+  tab.activeBorderTop: !alpha [*BRIGHT_YELLOW, 80]
+  tab.activeBorder:
+  tab.unfocusedActiveBorder:
+  tab.inactiveBackground: *BGDark
+  tab.inactiveForeground: *COMMENT
+  tab.unfocusedActiveForeground:
+  tab.unfocusedInactiveForeground:
+
+#########
+# Editor
+#########
+  editor.foreground: *FG
+  editor.background: *BG
+  editorLineNumber.foreground: *COMMENT
+  editorCursor.foreground:
+
+  editor.selectionBackground: *SELECTION
+  editor.selectionHighlightBackground: *BGLighter
+  editor.inactiveSelectionBackground:
+  editor.foldBackground: *BGDark
+
+  editor.wordHighlightBackground: !alpha [ *BRIGHT_YELLOW, 50 ]
+  editor.wordHighlightStrongBackground: !alpha [ *CYAN, 50 ]
+
+  editor.findMatchBackground: !alpha [ *BRIGHT_BLUE, 80 ]
+  editor.findMatchHighlightBackground: !alpha [ *WHITE_WHITE, 40 ]
+  editor.findRangeHighlightBackground: *LineHighlight
+
+  editor.hoverHighlightBackground: !alpha [*BRIGHT_YELLOW, 50]
+
+  editor.lineHighlightBackground:
+  editor.lineHighlightBorder: *SELECTION
+
+  editorLink.activeForeground: *BRIGHT_YELLOW
+  editor.rangeHighlightBackground: !alpha [ *RED, 15 ]
+
+  editor.snippetTabstopHighlightBackground: *BG
+  editor.snippetTabstopHighlightBorder: *COMMENT
+  editor.snippetFinalTabstopHighlightBackground: *BG
+  editor.snippetFinalTabstopHighlightBorder: *CYAN
+
+  editorWhitespace.foreground: *NonText
+  editorIndentGuide.background: *NonText
+  editorIndentGuide.activeBackground: !alpha [ *WHITE_WHITE, 45]
+  editorRuler.foreground: *NonText
+
+  editorCodeLens.foreground: *COMMENT
+
+  # NOTE: These are not set because they tend to be highly contested from
+  # person to person. Thus, setting these is probably better suited
+  # for workbench.colorCustomizations in User Settings
+  editorBracketMatch.background:
+  editorBracketMatch.border:
+
+  editorOverviewRuler.border: *BGDarker
+  editorOverviewRuler.findMatchForeground:
+  editorOverviewRuler.rangeHighlightForeground:
+  editorOverviewRuler.selectionHighlightForeground: *BRIGHT_BLUE
+  editorOverviewRuler.wordHighlightForeground: *BRIGHT_YELLOW
+  editorOverviewRuler.wordHighlightStrongForeground: *CYAN
+  editorOverviewRuler.modifiedForeground: !alpha [ *BRIGHT_YELLOW, 80 ]
+  editorOverviewRuler.addedForeground:    !alpha [ *CYAN,  80 ]
+  editorOverviewRuler.deletedForeground:  !alpha [ *BRIGHT_RED,    80 ]
+  editorOverviewRuler.errorForeground:    !alpha [ *BRIGHT_RED,    80 ]
+  editorOverviewRuler.warningForeground:  !alpha [ *BRIGHT_BLUE, 80 ]
+  editorOverviewRuler.infoForeground:     !alpha [ *BRIGHT_YELLOW,   80 ]
+
+  editorError.foreground: *BRIGHT_RED
+  editorError.border:
+  editorWarning.foreground: *BRIGHT_YELLOW
+  editorWarning.border:
+
+  editorGutter.background:
+  editorGutter.modifiedBackground: !alpha [ *BRIGHT_YELLOW, 80 ]
+  editorGutter.addedBackground:    !alpha [ *CYAN,  80 ]
+  editorGutter.deletedBackground:  !alpha [ *BRIGHT_RED,    80 ]
+
+  # Editor Widget Colors (such as find/replace)
+  editorWidget.background: *BGDark
+  editorWidgetBorder:
+
+  editorSuggestWidget.background: *BGDark
+  editorSuggestWidget.border:
+  editorSuggestWidget.foreground: *FG
+  editorSuggestWidget.highlightForeground:
+  editorSuggestWidget.selectedBackground: *SELECTION
+
+  editorHoverWidget.background: *BG
+  editorHoverWidget.border: *COMMENT
+
+  debugExceptionWidget.background:
+  debugExceptionWidget.border:
+
+  editorMarkerNavigation.background: *BGDark
+  editorMarkerNavigationError.background:
+  editorMarkerNavigationWarning.background:
+
+  # Peek View Colors
+  peekView.border: *SELECTION
+  peekViewEditor.background: *BG
+  peekViewEditorGutter.background:
+  peekViewEditor.matchHighlightBackground: !alpha [ *BRIGHT_CYAN, 80 ]
+  peekViewResult.background: *BGDark
+  peekViewResult.fileForeground: *FG
+  peekViewResult.lineForeground: *FG
+  peekViewResult.matchHighlightBackground: !alpha [ *BRIGHT_CYAN, 80 ]
+  peekViewResult.selectionBackground: *SELECTION
+  peekViewResult.selectionForeground: *FG
+  peekViewTitle.background: *BGDarker
+  peekViewTitleDescription.foreground: *COMMENT
+  peekViewTitleLabel.foreground: *FG
+
+######
+# Git 
+######
+  # Explorer Colors
+  gitDecoration.modifiedResourceForeground: *YELLOW
+  gitDecoration.deletedResourceForeground: *BRIGHT_RED
+  gitDecoration.untrackedResourceForeground: *COMMENT
+  gitDecoration.ignoredResourceForeground: *COMMENT
+  gitDecoration.conflictingResourceForeground: *BRIGHT_BLUE
+
+  # Diff Editor Colors
+  diffEditor.insertedTextBackground: !alpha [ *CYAN, 20 ]
+  diffEditor.insertedTextBorder:
+  diffEditor.removedTextBackground: !alpha [ *BRIGHT_RED, 50 ]
+  diffEditor.removedTextBorder:
+
+  # Merge Conflicts
+  merge.currentHeaderBackground: !alpha [ *CYAN, 90 ]
+  merge.currentContentBackground:
+  merge.incomingHeaderBackground: !alpha [ *RED, 90 ]
+  merge.incomingContentBackground:
+  merge.border:
+  editorOverviewRuler.currentContentForeground: *CYAN
+  editorOverviewRuler.incomingContentForeground: *RED
+
+  # Panel Colors (such as terminal)
+  panel.background: *BG
+  panel.border: *CYAN
+  panelTitle.activeBorder: *BRIGHT_YELLOW
+  panelTitle.activeForeground: *FG
+  panelTitle.inactiveForeground: *COMMENT
+
+#############
+# Status Bar
+#############
+  statusBar.background: *BG
+  statusBar.foreground: *FG
+  statusBar.debuggingBackground: *MAGENTA
+  statusBar.debuggingForeground: *BGDarker
+  statusBar.noFolderBackground: *BGDarker
+  statusBar.noFolderForeground: *FG
+  statusBarItem.activeBackground:
+  statusBarItem.hoverBackground:
+  statusBarItem.prominentBackground: *BRIGHT_YELLOW
+  statusBarItem.prominentHoverBackground: *BRIGHT_BLUE
+  statusBarItem.remoteForeground: *BGDark
+  statusBarItem.remoteBackground: *CYAN
+  statusBar.border:
+
+  # Title Bar Colors (MacOS Only)
+  titleBar.activeBackground: *BGDark
+  titleBar.activeForeground: *FG
+  titleBar.inactiveBackground: *BGDarker
+  titleBar.inactiveForeground: *COMMENT
+
+################
+# Notifications
+################
+  # Notification Dialog Colors
+  notification.background: *BG
+  notification.foreground: *FG
+  notification.buttonBackground: *SELECTION
+  notification.buttonForeground: *FG
+  notification.buttonHoverBackground: *LineHighlight
+  notification.errorBackground: *BRIGHT_RED
+  notification.errorForeground: *FG
+  notification.infoBackground: *BRIGHT_YELLOW
+  notification.infoForeground: *BG
+  notification.warningBackground: *BRIGHT_BLUE
+  notification.warningForeground: *BG
+
+  #############
+  # Extensions
+  #############
+  extensionButton.prominentForeground: *FG
+  extensionButton.prominentBackground: !alpha [ *CYAN, 90 ]
+  extensionButton.prominentHoverBackground: !alpha [ *CYAN, 60 ]
+
+  # Quick Picker
+  pickerGroup.border: *RED
+  pickerGroup.foreground: *BRIGHT_YELLOW
+
+  # Debug
+  debugToolBar.background: *BGDark
+
+  # Welcome Page
+  welcomePage.buttonBackground:
+  welcomePage.buttonHoverBackground:
+  walkThrough.embeddedEditorBackground: *BGDark
+
+  #################
+  # Settings Editor
+  #################
+  settings.headerForeground:           *FG
+  settings.modifiedItemForeground:     *BRIGHT_BLUE
+  settings.modifiedItemIndicator:      *BRIGHT_BLUE
+  settings.inactiveSelectedItemBorder:
+  settings.dropdownBackground:         *BGDark
+  settings.dropdownForeground:         *FG
+  settings.dropdownBorder:             *BGDarker
+  settings.checkboxBackground:         *BGDark
+  settings.checkboxForeground:         *FG
+  settings.checkboxBorder:             *BGDarker
+  settings.textInputBackground:        *BGDark
+  settings.textInputForeground:        *FG
+  settings.textInputBorder:            *BGDarker
+  settings.numberInputBackground:      *BGDark
+  settings.numberInputForeground:      *FG
+  settings.numberInputBorder:          *BGDarker
+
+  # Breadcrumbs
+  breadcrumb.foreground: *COMMENT
+  breadcrumb.background: *BG
+  breadcrumb.focusForeground: *FG
+  breadcrumb.activeSelectionForeground: *FG
+  breadcrumbPicker.background: *BGDarker
+
+  # Misc
+  menu.separatorBackground:
+
+  listFilterWidget.background: *BGLight
+  listFilterWidget.outline: *BGLighter
+  listFilterWidget.noMatchesOutline: *BRIGHT_RED
+
+### Token Colors ###
+
+##########
+# General
+##########
+tokenColors:
+  - name: text
+    scope: 
+      - text
+      - source
+    settings:
+      foreground: *FG
+  
+  - name: storage
+    scope: 
+      - storage
+      - keyword.declaration
+    settings:
+      foreground: *BRIGHT_YELLOW
+
+  - name: punctuation
+    scope:
+      - punctuation
+    settings:
+      foreground: *BRIGHT_YELLOW
+
+  - name: string
+    scope:
+      - string
+    settings:
+      foreground: *CYAN
+
+  - name: variable
+    scope:
+      - variable
+    settings:
+      foreground: *BRIGHT_YELLOW
+  
+  - name: constants
+    scope: constant.language
+    settings:
+      foreground: *BRIGHT_RED
+
+  - name: comment
+    scope:
+      - comment
+      - punctuation.definition.comment
+    settings:
+      foreground: *COMMENT
+  - name: comment doc
+    scope:
+      - storage.type.class.doxygen
+    settings:
+      foreground: *WHITE
+
+  - name: function
+    scope:
+      - support.function
+      - entity.name.function
+    settings:
+      foreground: *BRIGHT_BLUE
+
+  - name: tag
+    scope:
+      - entity.name.tag
+      - support.type.property-name
+    settings:
+      foreground: *BRIGHT_RED
+
+  - name: attribute
+    scope:
+      - entity.other.attribute-name
+    settings:
+      foreground: *YELLOW
+
+  - name: class type
+    scope:
+      - entity.name.type
+      - storage.type.built-in
+      - support.class
+    settings:
+      foreground: *GREEN
+
+  - name: operator
+    scope:
+      - keyword.operator
+    settings:
+      foreground: *BRIGHT_YELLOW
+
+  - name: keyword
+    scope:
+      - keyword
+      - variable.language.this
+      - keyword.other.decltype.cpp
+    settings:
+      foreground: *BRIGHT_RED
+
+  - name: member
+    scope:
+      - entity.name.function.member
+      - variable.other.property
+    settings:
+      foreground: *BRIGHT_GREEN
+  
+  - name: arguments
+    scope:
+      - variable.parameter
+    settings:
+      foreground: *YELLOW
+    
+#########################
+# end of general section
+#########################
+
+
+###########
+# Markdown
+###########
+  - name: header
+    scope:
+      - markup.heading
+    settings:
+      foreground: *BRIGHT_YELLOW
+  - name: code
+    scope:
+      - markup.fenced_code
+      - markup.inline
+    settings:
+      foreground: *BRIGHT_MAGENTA
+  - name: list
+    scope:
+      - markup.list
+      - punctuation.list
+    settings:
+      foreground: *BRIGHT_GREEN
+  - name: bold
+    scope:
+      - markup.bold
+      - punctuation.definition.bold
+    settings:
+      foreground: *BRIGHT_RED
+  - name: italic
+    scope:
+      - markup.italic
+      - punctuation.definition.italic
+    settings:
+      foreground: *YELLOW
+  - name: links
+    scope:
+      - meta.link
+      - string.other.link
+    settings:
+      foreground: *BRIGHT_BLUE
+########
+# Latex
+########
+  - name: meth
+    scope:
+      - meta.math.block
+    settings:
+      foreground: *BRIGHT_MAGENTA  
+
+######
+# C++
+######
+  - name: preprocessor
+    scope:
+      - meta.preprocessor
+      - punctuation.definition.directive
+    settings:
+      foreground: *BRIGHT_RED
+  - name: template
+    scope:
+      - storage.type.template
+    settings:
+      foreground: *BRIGHT_MAGENTA
+########
+# CMake
+########
+  - name: keyword
+    scope:
+      - keyword.cmake
+    settings:
+      foreground: *BRIGHT_RED
+
+#######
+# YAML
+#######
+  - name: anchor/alias
+    scope:
+      - entity.name.type.anchor
+      - variable.other.alias
+    settings:
+      foreground: *FG

@@ -1,6 +1,6 @@
 {
     // General Settings
-    "editor.fontFamily": "'Noto Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontFamily": "'Noto Mono for Powerline'",
     "files.trimTrailingWhitespace": true,
     "files.associations": {
       "*.sdf": "xml",
@@ -22,7 +22,7 @@
     "explorer.confirmDragAndDrop": false,
 
     // Terminal settings
-    "terminal.integrated.fontFamily": "Menlo for Powerline",
+    "terminal.integrated.fontFamily": "Noto Mono for Powerline",
     "terminal.integrated.scrollback": 2000,
 
     // C++ Settings
