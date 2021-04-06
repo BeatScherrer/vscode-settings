@@ -68,7 +68,11 @@
     ],
     "python.formatting.autopep8Args": [
       "--max-line-length=90"
-    ]
+    ],
+    "workbench.welcomePage.hiddenCategories": [
+      "Setup"
+    ],
+    "angular.experimental-ivy": true
 
     // Doxygen Settings
 }
