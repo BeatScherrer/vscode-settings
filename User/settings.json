@@ -1,78 +1,126 @@
 {
-    // General Settings
-    "editor.fontFamily": "'Noto Mono for Powerline'",
-    "files.trimTrailingWhitespace": true,
-    "files.associations": {
-      "*.sdf": "xml",
-      "*.world": "xml",
-      "*.gazebo": "xml"
-    },
+  // General Settings
+  "editor.fontFamily": "'Noto Mono for Powerline','Source Code Pro for Powerline'",
+  "editor.lineHeight": 1.2,
+  "files.trimTrailingWhitespace": true,
+  "files.associations": {
+    "*.sdf": "xml",
+    "*.world": "xml",
+    "*.gazebo": "xml",
+    "*.idl": "C"
+  },
 
-    // Editor Settings
-    "editor.renderWhitespace": "all",
-    "editor.tabSize": 2,
-    "editor.fontSize": 13,
-    "editor.detectIndentation": false,
-    "[python]": {
-      "editor.tabSize": 4
-    },
+  // Editor Settings
+  "editor.renderWhitespace": "all",
+  "editor.tabSize": 2,
+  "editor.fontSize": 11,
+  "editor.detectIndentation": false,
+  "[python]": {
+    "editor.tabSize": 8
+  },
 
-    // Explorer
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
+  // Explorer
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
 
-    // Terminal settings
-    "terminal.integrated.fontFamily": "Noto Mono for Powerline",
-    "terminal.integrated.scrollback": 2000,
+  // Terminal settings
+  "terminal.integrated.fontFamily": "'Noto Mono for Powerline','Source Code Pro for Powerline'",
+  "terminal.integrated.scrollback": 2000,
 
-    // C++ Settings
-    "C_Cpp.default.cppStandard": "c++17",
-    "C_Cpp.default.cStandard": "c11",
-    "C_Cpp.default.includePath": [
-        "${workspaceFolder}/**",
-        "/usr/include",
-        "/usr/local/include",
-    ],
-    "C_Cpp.default.browse.limitSymbolsToIncludedHeaders": true,
-    "C_Cpp.default.browse.databaseFilename": "~/.vscode/browse.vc.db",
+  // C++ Settings
+  "C_Cpp.default.cppStandard": "c++17",
+  "C_Cpp.default.cStandard": "c11",
+  "C_Cpp.default.includePath": [
+    "${workspaceFolder}/**",
+    "/usr/include",
+    "/usr/local/include"
+  ],
+  "C_Cpp.default.browse.limitSymbolsToIncludedHeaders": true,
+  "C_Cpp.default.browse.databaseFilename": "~/.vscode/browse.vc.db",
 
-    // Intellisense settings
-    "C_Cpp.default.intelliSenseMode": "gcc-x64",
-    "C_Cpp.intelliSenseEngine": "Default",
-    "C_Cpp.intelliSenseEngineFallback": "Disabled",
-    "C_Cpp.intelliSenseCacheSize": 10000,
-    "C_Cpp.workspaceParsingPriority": "highest",
+  // Intellisense settings
+  "C_Cpp.default.intelliSenseMode": "linux-clang-x64",
+  "C_Cpp.intelliSenseEngine": "Default",
+  "C_Cpp.intelliSenseEngineFallback": "Disabled",
+  "C_Cpp.intelliSenseCacheSize": 10000,
+  "C_Cpp.intelliSenseCachePath": "${workspaceFolder}/.vscode/intellisense.vc.db",
+  "C_Cpp.workspaceParsingPriority": "highest",
+  "C_Cpp.autocomplete": "Default",
 
-    // Clang-format settings
-    "C_Cpp.clang_format_path": "/usr/bin/clang-format",
-    "C_Cpp.clang_format_style": "file", // finds the next parent .clang-format file
-    "C_Cpp.clang_format_fallbackStyle": "none",
-    "C_Cpp.updateChannel": "Default",
-    "window.zoomLevel": 0,
-    "[cpp]": {
-      "editor.defaultFormatter": "ms-vscode.cpptools"
-    },
-    "extensions.ignoreRecommendations": false,
-    "editor.lineNumbers": "relative",
-    "[xml]": {
-      "editor.defaultFormatter": "redhat.vscode-xml"
-    },
-    "debug.console.fontSize": 13,
-    "markdown.preview.fontSize": 13,
-    "workbench.colorTheme": "gravel-pit",
-    "editor.autoIndent": "advanced",
-    // Python settings
-    "python.formatting.provider": "autopep8",
-    "python.linting.pylintArgs": [
-      "--max-line-length=90"
-    ],
-    "python.formatting.autopep8Args": [
-      "--max-line-length=90"
-    ],
-    "workbench.welcomePage.hiddenCategories": [
-      "Setup"
-    ],
-    "angular.experimental-ivy": true
+  // Clang-format settings
+  "C_Cpp.clang_format_path": "~/.local/bin/clang-format",
+  "C_Cpp.clang_format_style": "file", // finds the next parent .clang-format file
+  "C_Cpp.clang_format_fallbackStyle": "none",
+  "C_Cpp.updateChannel": "Insiders",
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "clang-format.executable": "/home/beat/.local/bin/clang-format",
+  "extensions.ignoreRecommendations": false,
+  "editor.lineNumbers": "relative",
+  "[xml]": {
+    "editor.defaultFormatter": "DotJoshJohnson.xml"
+  },
+  "debug.console.fontSize": 13,
+  "markdown.preview.fontSize": 13,
+  "workbench.colorTheme": "gravel-pit",
+  "editor.autoIndent": "advanced",
 
-    // Doxygen Settings
+  // Python settings
+  "python.formatting.provider": "autopep8",
+  "python.linting.pylintArgs": ["--max-line-length=90"],
+  "python.formatting.autopep8Args": ["--max-line-length=90"],
+  "terminal.external.linuxExec": "urxvt",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "yaml.schemas": {
+    "file:///home/beat/.vscode/extensions/atlassian.atlascode-2.9.1/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+  },
+  "atlascode.jira.jqlList": [
+    {
+      "id": "71d3d844-78f7-42ef-bc66-44aa31a1b21e",
+      "enabled": true,
+      "name": "My jira.mt Issues",
+      "query": "assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
+      "siteId": "jira.mt",
+      "monitor": true
+    }
+  ],
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "redhat.telemetry.enabled": false,
+  "terminal.integrated.profiles.linux": {
+    "zsh": {
+      "path": "zsh"
+    }
+  },
+  "java.home": "/usr/lib/jvm/java-11-openjdk",
+  "ros.distro": "/opt/ros/galactic/setup.zsh",
+  "editor.cursorStyle": "line",
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.wordWrap": "off",
+  "editor.useTabStops": false,
+
+  // Shell script
+  "[shellscript]": {
+    "files.eol": "\n",
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "git.confirmSync": false,
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "C_Cpp.workspaceSymbols": "All",
+  "cmake.configureOnOpen": true,
+  "workbench.iconTheme": "vscode-icons",
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.formatOnSave": true,
+  "debug.console.fontFamily": "'Noto Mono for Powerline','Source Code Pro for Powerline'",
+  "terminal.integrated.fontSize": 12
 }
